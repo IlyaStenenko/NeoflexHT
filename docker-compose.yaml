@@ -1,0 +1,13 @@
+version: "3.0"
+services:
+  db:
+    container_name: postgres-vacation-calculator
+    image: postgres:12.20-alpine3.20
+    restart: always
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: holiday_dates
+      POSTGRES_EXTENSION: hstore
